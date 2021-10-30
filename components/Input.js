@@ -1,4 +1,5 @@
 import {useState} from 'react'
+
 export default function Input({ handleSubmit}) {
     const [value, setValue] = useState("")
 
@@ -9,10 +10,10 @@ export default function Input({ handleSubmit}) {
     }
 
     return (
-        <form onSubmit={(e) => handleSubmit(value)}>
+        <form onSubmit={submitForm}>
             <input type="text" value={value} 
                     onChange={e => setValue(e.target.value)} 
-                    className="rounded px-3 py2">
+                    className="rounded px-3 py3">
 
             </input>
             <button type="submit" className="bg-pink-300 rounded px-12 py-3"></button>
